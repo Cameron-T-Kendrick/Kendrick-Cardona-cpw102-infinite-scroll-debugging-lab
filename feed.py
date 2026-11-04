@@ -9,16 +9,16 @@ posts = [
     "CS students build a game",
 ]
 
-PAGE_SIZE = 2
+PAGE_SIZE = 3
 
 
 def fetch_page(page):
-    start = page * PAGE_SIZE
-    end = start + PAGE_SIZE
+    start = page * PAGE_SIZE #0
+    end = start + PAGE_SIZE #3
     return posts[start:end]
 
 
-page = 1
+page = 0
 feed = []
 
 # def main():
@@ -28,7 +28,7 @@ while True:
 
     for post in new_posts:
         feed.append(post)
-
+        
     print("\nYour Feed:")
     for post in feed:
         print("-", post)
@@ -38,6 +38,7 @@ while True:
     action = input("\nScroll? (y/n): ")
 
     if action.strip().lower() == "y" or action.strip().lower() == "yes":  #Fixed Yes and No statment
+        action = 1
         continue
     elif action.lower() == "n" or "no": 
          break

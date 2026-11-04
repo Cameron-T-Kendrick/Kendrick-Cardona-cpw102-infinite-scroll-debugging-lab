@@ -37,3 +37,16 @@ loop of 3 lines that keep getting printed.
 
 2:12 PM
 tried messing with PAGE_SIZE and changed it to 2, and we got 2 lines instead of 3
+
+2:16PM
+the page number will pull certain parts of the dictionary. We figured that if we are able to mess with its feed outputs,
+then we can get new lines
+
+2:24PM
+We started to understand where to start looking to fix, which is where the WHILE loop statment is ratheter than the function
+
+2:29PM
+Tried doing post += feed in the loop (didn't work)
+
+2:33PM 
+Making action into a number works, but actually trying to turn it into a add on for each line isn't work yet
