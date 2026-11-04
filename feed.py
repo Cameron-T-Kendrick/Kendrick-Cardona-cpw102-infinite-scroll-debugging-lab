@@ -15,6 +15,7 @@ PAGE_SIZE = 3
 def fetch_page(page):
     start = page * PAGE_SIZE
     end = start + PAGE_SIZE
+    action = 
     return posts[start:end]
 
 
@@ -35,7 +36,12 @@ while True:
 
     action = input("\nScroll? (y/n): ")
 
-    if action.lower() == "n" or "no": #fixed the no issue, but now running into still putting any word is still TRUE
+    if action.lower() == "y" or "yes":
+        return True 
+    
+    elif action.lower() == "n" or "no": #fixed the no issue, but now running into still putting any word is still TRUE
+        return False 
+    
         break
 
     page = 0
