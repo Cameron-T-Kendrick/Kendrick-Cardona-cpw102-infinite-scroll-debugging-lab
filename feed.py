@@ -7,9 +7,10 @@ posts = [
     "New library study spaces",
     "Campus Wi-Fi gets upgraded",
     "CS students build a game",
+    "END OF CONTENT"
 ]
 
-PAGE_SIZE = 3
+PAGE_SIZE = 2
 
 
 def fetch_page(page):
@@ -39,6 +40,7 @@ while True:
 
     if action.strip().lower() == "y" or action.strip().lower() == "yes":  #Fixed Yes and No statment
         action = 1
+        page += action 
         continue
     elif action.lower() == "n" or "no": 
          break
@@ -46,7 +48,7 @@ while True:
         print("Invalid input, try again.")
         break
 
-    page = 0
+    
 
 
 print("Session ended.")

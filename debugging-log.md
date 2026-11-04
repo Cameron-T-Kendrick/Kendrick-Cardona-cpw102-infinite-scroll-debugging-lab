@@ -50,3 +50,12 @@ Tried doing post += feed in the loop (didn't work)
 
 2:33PM 
 Making action into a number works, but actually trying to turn it into a add on for each line isn't work yet
+
+2:44PM
+We made action a value of 1, then made page += action so that each time it goes in the calculation it adds with 1 each time we say YES
+
+2:46PM
+Made PAGE_SIZE = 2 so it flowed better with the scroll
+
+2:47PM
+Made a end of content statment for the code
