@@ -41,3 +41,42 @@ while True:
     page = 0
 
 print("Session ended.")
+
+
+
+""" 
+============NOTES================
+- It just give us these lines each time it scrolls:
+    "New campus coffee shop opens",
+    "Python workshop this Friday",
+    "Robotics club builds a drone",
+
+- It lets me scroll past the 3 posts as if they where new
+    - like if I scroll past the 8, it keeps loading the coppied posts
+        Your Feed:
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+
+                Loaded 18 posts
+
+- When we hit NO, No, or N, it doesn't read it as no and keeps posting, but it does do that for yes
+    - It also makes any word we put through thats not a "n" a true value. Like if I put "SMILE", it still sends
+
+
+"""
