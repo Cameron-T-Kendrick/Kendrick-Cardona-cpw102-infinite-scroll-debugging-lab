@@ -35,7 +35,7 @@ while True:
 
     action = input("\nScroll? (y/n): ")
 
-    if action == "n":
+    if action.lower() == "n" or "no": #fixed the no issue, but now running into still putting any word is still TRUE
         break
 
     page = 0
