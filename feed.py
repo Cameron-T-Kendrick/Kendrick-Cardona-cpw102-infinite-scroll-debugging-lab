@@ -1,32 +1,35 @@
 posts = [
     "New campus coffee shop opens",
     "Python workshop this Friday",
-    "Robotics club builds a drone",
+    "Robotics club builds a drone", #Loops back
     "Students launch a weather app",
     "Hackathon registration is open",
     "New library study spaces",
     "Campus Wi-Fi gets upgraded",
     "CS students build a game",
+    "END OF CONTENT"
 ]
 
-PAGE_SIZE = 3
+PAGE_SIZE = 2
 
 
 def fetch_page(page):
-    start = page * PAGE_SIZE
-    end = start + PAGE_SIZE
+    start = page * PAGE_SIZE #0
+    end = start + PAGE_SIZE #3
     return posts[start:end]
 
 
 page = 0
 feed = []
 
+# def main():
+
 while True:
     new_posts = fetch_page(page)
 
     for post in new_posts:
         feed.append(post)
-
+        
     print("\nYour Feed:")
     for post in feed:
         print("-", post)
@@ -35,9 +38,56 @@ while True:
 
     action = input("\nScroll? (y/n): ")
 
-    if action == "n":
+    if action.strip().lower() == "y" or action.strip().lower() == "yes":  #Fixed Yes and No statment
+        action = 1
+        page += action 
+        continue
+    elif action.lower() == "n" or "no": 
+         break
+    else:
+        print("Invalid input, try again.")
         break
 
-    page = 0
+    
+
 
 print("Session ended.")
+
+
+# fetch_page(page)
+""" 
+============NOTES================
+- It just give us these lines each time it scrolls:
+    "New campus coffee shop opens",
+    "Python workshop this Friday",
+    "Robotics club builds a drone",
+
+- It lets me scroll past the 3 posts as if they where new
+    - like if I scroll past the 8, it keeps loading the coppied posts
+        Your Feed:
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+                - New campus coffee shop opens
+                - Python workshop this Friday
+                - Robotics club builds a drone
+
+                Loaded 18 posts
+
+- When we hit NO, No, or N, it doesn't read it as no and keeps posting, but it does do that for yes
+    - It also makes any word we put through thats not a "n" a true value. Like if I put "SMILE", it still sends
+
+
+"""

@@ -16,3 +16,46 @@ Use numbered entries or timestamps. Use Markdown formatting to make it easy to r
 
 Explain the causes, your repairs, and the evidence that verifies them. Identify
 anything still uncertain or unresolved. Make code changes in `feed.py`.
+
+
+
+Made these changes at 1:56 PM:
+Fixed the Yes, no and other invalid inputs
+Code resolution:
+
+if action.strip().lower() == "y" or action.strip().lower() == "yes": 
+        continue
+    elif action.lower() == "n" or "no": #fixed the no issue, but now running into still putting any word is still TRUE
+         break
+    else:
+        break
+
+
+2:10PM
+Tried messing with feed and page and we see that changing feed wont work and if we change the page, it added the same line from the 
+loop of 3 lines that keep getting printed.
+
+2:12 PM
+tried messing with PAGE_SIZE and changed it to 2, and we got 2 lines instead of 3
+
+2:16PM
+the page number will pull certain parts of the dictionary. We figured that if we are able to mess with its feed outputs,
+then we can get new lines
+
+2:24PM
+We started to understand where to start looking to fix, which is where the WHILE loop statment is ratheter than the function
+
+2:29PM
+Tried doing post += feed in the loop (didn't work)
+
+2:33PM 
+Making action into a number works, but actually trying to turn it into a add on for each line isn't work yet
+
+2:44PM
+We made action a value of 1, then made page += action so that each time it goes in the calculation it adds with 1 each time we say YES
+
+2:46PM
+Made PAGE_SIZE = 2 so it flowed better with the scroll
+
+2:47PM
+Made a end of content statment for the code
