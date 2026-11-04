@@ -15,7 +15,6 @@ PAGE_SIZE = 3
 def fetch_page(page):
     start = page * PAGE_SIZE
     end = start + PAGE_SIZE
-    action = 
     return posts[start:end]
 
 
@@ -36,20 +35,21 @@ while True:
 
     action = input("\nScroll? (y/n): ")
 
-    if action.lower() == "y" or "yes":
-        return True 
-    
+    if action.strip().lower() == "y" or action.strip().lower() == "yes": 
+        continue
     elif action.lower() == "n" or "no": #fixed the no issue, but now running into still putting any word is still TRUE
-        return False 
-    
+         break
+    else:
         break
+    # else:  
+    #     break
 
     page = 0
 
 print("Session ended.")
 
 
-
+# fetch_page(page)
 """ 
 ============NOTES================
 - It just give us these lines each time it scrolls:
