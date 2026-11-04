@@ -1,7 +1,7 @@
 posts = [
     "New campus coffee shop opens",
     "Python workshop this Friday",
-    "Robotics club builds a drone",
+    "Robotics club builds a drone", #Loops back
     "Students launch a weather app",
     "Hackathon registration is open",
     "New library study spaces",
@@ -9,7 +9,7 @@ posts = [
     "CS students build a game",
 ]
 
-PAGE_SIZE = 3
+PAGE_SIZE = 2
 
 
 def fetch_page(page):
@@ -18,8 +18,10 @@ def fetch_page(page):
     return posts[start:end]
 
 
-page = 0
+page = 1
 feed = []
+
+# def main():
 
 while True:
     new_posts = fetch_page(page)
@@ -35,16 +37,16 @@ while True:
 
     action = input("\nScroll? (y/n): ")
 
-    if action.strip().lower() == "y" or action.strip().lower() == "yes": 
+    if action.strip().lower() == "y" or action.strip().lower() == "yes":  #Fixed Yes and No statment
         continue
-    elif action.lower() == "n" or "no": #fixed the no issue, but now running into still putting any word is still TRUE
+    elif action.lower() == "n" or "no": 
          break
     else:
+        print("Invalid input, try again.")
         break
-    # else:  
-    #     break
 
     page = 0
+
 
 print("Session ended.")
 

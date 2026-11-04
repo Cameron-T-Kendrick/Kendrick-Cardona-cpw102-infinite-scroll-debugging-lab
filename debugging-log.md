@@ -29,3 +29,11 @@ if action.strip().lower() == "y" or action.strip().lower() == "yes":
          break
     else:
         break
+
+
+2:10PM
+Tried messing with feed and page and we see that changing feed wont work and if we change the page, it added the same line from the 
+loop of 3 lines that keep getting printed.
+
+2:12 PM
+tried messing with PAGE_SIZE and changed it to 2, and we got 2 lines instead of 3
